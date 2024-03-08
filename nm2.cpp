@@ -50,8 +50,10 @@ void gauss_jordan(gsl_matrix *A, gsl_vector *b)
 int main()
 {
 
-  std::ofstream myfile;
-  myfile.open("NumericalLab02.txt");
+  std::ofstream myfile1;
+  std::ofstream myfile2;
+  myfile1.open("NumericalLab02_1.txt");
+  myfile2.open("NumericalLab02_2.txt");
 
   double A_data[5][5] = {
       {0, 1, 6, 9, 10},
@@ -63,7 +65,7 @@ int main()
 
   for (double q = 0; q <= 3; q += 0.01)
   {
-    if (q != 1.00)
+    if (q != double(1))
     {
 
       gsl_matrix *A = gsl_matrix_alloc(5, 5);
@@ -77,7 +79,7 @@ int main()
         gsl_vector_set(b, i, b_data[i]);
       }
 
-      gsl_matrix_set(A, 0, 0, q);
+      gsl_matrix_set(A, 0, 0, 2 * q);
 
       gauss_jordan(A, b);
 
@@ -92,23 +94,23 @@ int main()
         gsl_vector_set(c, i, sum);
       }
 
-      myfile << "q = " << std::fixed << std::setw(5) << q << " , x = [";
+      myfile1 << "q = " << std::fixed << std::setw(5) << q << " , x = [";
       for (int i = 0; i < 5; i++)
       {
-        myfile << gsl_vector_get(b, i) << std::setw(5);
+        myfile1 << gsl_vector_get(b, i) << std::setw(5);
         if (i < 4)
-          myfile << ", ";
+          myfile1 << ", ";
       }
-      myfile << "] ";
+      myfile1 << "]\n";
 
-      myfile << " , c = [";
+      myfile2 << " , c = [";
       for (int i = 0; i < 5; i++)
       {
-        myfile << gsl_vector_get(c, i) << std::setw(5);
+        myfile2 << gsl_vector_get(c, i) << std::setw(5);
         if (i < 4)
-          myfile << ", ";
+          myfile2 << ", ";
       }
-      myfile << "]\n";
+      myfile2 << "]\n";
 
       gsl_matrix_free(A);
       gsl_vector_free(b);
@@ -116,7 +118,8 @@ int main()
     }
   }
 
-  myfile.close();
+  myfile1.close();
+  myfile2.close();
 
   return 0;
 }
