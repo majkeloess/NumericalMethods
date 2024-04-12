@@ -43,8 +43,7 @@ void powerMethod(gsl_matrix *A, int maxIter)
     {
       file << gsl_vector_get(x, j) << "\t";
     }
-    file << std::endl
-         << std::endl;
+    file << std::endl;
 
     gsl_vector_free(Ax);
   }
