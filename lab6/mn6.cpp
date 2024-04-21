@@ -7,6 +7,7 @@
 // Funkcje do interpolacji
 double f1(double x) { return exp(-x * x); }
 double f2(double x) { return cos(2 * x); }
+double f3(double x) { return x < 0 ? -1 : 1; }
 
 // Wielomian interpolacyjny Lagrange'a
 double lagrangeInterpolation(const std::vector<double> &x, const std::vector<double> &y, double x2)
@@ -63,7 +64,7 @@ void performInterpolation(double (*func)(double), const std::string &filename)
 
   for (int n : {5, 10, 15, 20})
   {
-    std::vector<double> nodes = generateChebyshevNodes(-5, 5, n);
+    std::vector<double> nodes = generateNodes(-5, 5, n);
     std::vector<double> values = calculateValues(nodes, func);
     for (double x = -5; x <= 5; x += 0.1)
     {
@@ -79,7 +80,8 @@ void performInterpolation(double (*func)(double), const std::string &filename)
 
 int main()
 {
-  performInterpolation(f1, "interpolationCzebyszew_f1.csv");
-  performInterpolation(f2, "interpolationCzebyszew_f2.csv");
+  // performInterpolation(f1, "interpolationCzebyszew_f1.csv");
+  // performInterpolation(f2, "interpolationCzebyszew_f2.csv");
+  performInterpolation(f3, "interpolation_f3.csv");
   return 0;
 }

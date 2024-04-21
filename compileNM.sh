@@ -2,6 +2,6 @@ echo "Compiling and running"
 
 param=$1
 
-g++ "$param.cpp" -lgsl -lgslcblas -lm -o "$param"
+gcc "$param.c" -lgsl -lgslcblas -lm -o "$param"
 
 ./$param
