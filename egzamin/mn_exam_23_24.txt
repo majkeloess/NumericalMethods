@@ -72,9 +72,7 @@
 	• wyznaczanie wartości i wektorów własnych macierzy trójdiagonalnej metodą bisekcji
 	• rozwiązanie uogólnionego problemu własnego (przedstawienie kolejnych kroków postępowania)
 
-4. Metody iteracyjnego rozwiązywania układów równań liniowych
-	• metody: Jacobiego, Gaussa-Seidla (wyprowadzenie)
-	• metoda sprzężonego gradientu (wyprowadzenie)
+
 	
 5. Metody poszukiwania pierwiastków równania nieliniowego z jedną niewiadomą
 	• metody: bisekcji, siecznych, regula falsi, Newtona (wyprowadzenie wzorów iteracyjnych) oraz modyfikacje tych metod dla pierwiastków wielokrotnych (bez szczegółowej analizy rzędu metody)
