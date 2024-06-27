@@ -61,18 +61,24 @@
 	
 	
 	
-# DO PRZEROBIENIA:
+# ROBIE: 
+
 
 1. Błędy numeryczne
-	• błędy zaokrągleń podczas sumowania N liczb i sposób ich minimalizacji
+	• klasyfikacja błędów: wejściowe, obcięcia i zaokrąglenia; lemat Wilkinsona i jego interpretacja
+	• uwarunkowanie zadania numerycznego na przykładzie obliczania iloczynu skalarnego dwóch wektorów
 
+2. Metody rozwiązywania układów równań liniowych i nadokreślonych
+	• metoda eliminacji Gaussa z częściowym i pełnym wyborem elementu głównego
+	• rozkład LU macierzy metodą Gaussa (wyprowadzenie)
+	• ortogonalizacja Grama-Schmidta (dla bazy wektorowej)
 
 3. Wyznaczanie wartości i wektorów własnych
 	• metoda potęgowa poszukiwania wartości i wektorów własnych, redukcja Hottelinga (wyprowadzenie)
-	• wyznaczanie wartości i wektorów własnych macierzy trójdiagonalnej metodą bisekcji
-	• rozwiązanie uogólnionego problemu własnego (przedstawienie kolejnych kroków postępowania)
 
-
+4. Metody iteracyjnego rozwiązywania układów równań liniowych
+	• metody: Jacobiego, Gaussa-Seidla (wyprowadzenie)
+	• metoda sprzężonego gradientu (wyprowadzenie)
 	
 5. Metody poszukiwania pierwiastków równania nieliniowego z jedną niewiadomą
 	• metody: bisekcji, siecznych, regula falsi, Newtona (wyprowadzenie wzorów iteracyjnych) oraz modyfikacje tych metod dla pierwiastków wielokrotnych (bez szczegółowej analizy rzędu metody)
@@ -81,31 +87,35 @@
 	• wyprowadzenie wzoru interpolacyjnego Lagrange’a, oszacowanie błędu wzoru interpolacyjnego
 
 7. Aproksymacja
-	• definicje norm stosowanych w aproksymacji
 	• ogólna metoda aproksymacji średniokwadratowej (wyprowadzenie), zapis w postaci macierzowej
-	• aproksymacja średniokwadratowa w bazie jednomianów (wyprowadzenie), zapis w postaci macierzowej
 
 8. Całkowanie numeryczne - kwadratury Newtona-Cotesa
 	• wyprowadzenie ogólnego wzoru na współczynniki kwadratury Newtona-Cotesa
-	• wzór trapezów z błędami (wyprowadzenie)
 	• wzór parabol z błędami (wyprowadzenie)
 
-9. Minimalizacja wartości funkcji
-	• metoda złotego podziału (wyprowadzenie)
-	• metoda interpolacji kwadratowej Powell’a (wyprowadzenie)
-	• metoda Newtona dla funkcji kwadratowej w Rn
-
-10. Szybka transformacja Fouriera (FFT)
-	• przedstawienie metody Radix-2
-	• przykład wykorzystania FFT do szybkiego mnożenia wielomianów
-
 11. Generatory liczb pseudolosowych
-	• definicja kongruencji
 	• definicja generatora liniowego o rozkładzie równomiernym U(0, 1) i jego parametry statystyczne (wartość oczekiwana zmiennej losowej, odchylenie standardowe, funkcja autokorelacji oraz ich estymatory)
 	• metoda odwracania dystrybuanty dla rozkładów: jednomianowego, eksponencjalnego i normalnego (metoda Boxa-Mullera) (wyprowadzenie)
-	• testowanie generatorów: opis testu χ
 
 12. Całkowanie metodą Monte Carlo
 	• metoda podstawowa
 	• sposób estymacji wartości oczekiwanej oraz odchylenia standardowego
+	
+	
 
+# DO ZROBIENIA :
+
+	
+5. Metody poszukiwania pierwiastków równania nieliniowego z jedną niewiadomą
+	• metody: bisekcji, siecznych, regula falsi, Newtona (wyprowadzenie wzorów iteracyjnych) oraz modyfikacje tych metod dla pierwiastków wielokrotnych (bez szczegółowej analizy rzędu metody)
+
+
+
+
+8. Całkowanie numeryczne - kwadratury Newtona-Cotesa
+	• wyprowadzenie ogólnego wzoru na współczynniki kwadratury Newtona-Cotesa
+	• wzór parabol z błędami (wyprowadzenie)
+
+11. Generatory liczb pseudolosowych
+	• definicja generatora liniowego o rozkładzie równomiernym U(0, 1) i jego parametry statystyczne (wartość oczekiwana zmiennej losowej, odchylenie standardowe, funkcja autokorelacji oraz ich estymatory)
+	• metoda odwracania dystrybuanty dla rozkładów: jednomianowego, eksponencjalnego i normalnego (metoda Boxa-Mullera) (wyprowadzenie)
